@@ -1,0 +1,9 @@
+node_modules
+public/js
+public/css
+secrets.js
+dist
+
+firebase.json
+.firebasesrc
+firestore.rules

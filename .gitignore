@@ -4,7 +4,8 @@ public/css
 secrets.js
 dist
 
+.firebase
+.firebaserc
 firebase.json
-.firebasesrc
 firestore.rules
-firestore.indexes.json
+firebase.indexes.json

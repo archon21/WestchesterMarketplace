@@ -20,7 +20,7 @@ class Routes extends Component {
       <Switch>
         <Route exact path="/" component={SalesAd} />
         <Route exact path="/sales-ad" component={SalesAd} />
-        <Route exact path="/about" component={Info} />
+        <Route exact path="/about" component={Home} />
         <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/templator" component={Templator} />
         <Route component={NotFound} />

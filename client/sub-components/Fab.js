@@ -15,7 +15,7 @@ class Fab extends Component {
     const { isOptionHover } = this.state;
     const { options } = this.props;
     return (
-      <div className="mdc-fab-container">
+      <div className="mdc-fab-container no-print">
         <div className="fab fab-icon-holder">
           <i className="material-icons">more_vert</i>
         </div>

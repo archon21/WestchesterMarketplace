@@ -35,15 +35,45 @@ class Navbar extends Component {
   render() {
     const { open, selectedLink } = this.state;
     return (
-      <nav id="nav-h" className="flex column black align-center">
+      <nav id="nav-h" className="flex column black align-center no-print">
         <div className="nav-h__upper flex row items-center">
-          <NavHButton open={open} toggleNavH={this.toggleNavH} />
-          <Link to={{pathname: '/'}}>
-          <img src="https://firebasestorage.googleapis.com/v0/b/hayesdevelopers.appspot.com/o/logo.png?alt=media&token=a014a66a-b1c2-411c-bede-55117ca8e205" className="nav__logo" />
+          {/* <NavHButton open={open} toggleNavH={this.toggleNavH} /> */}
+          <Link
+            className={`headline-6 color-white p-5px ${selectedLink ===
+              'sales-ad' && 'selected'}`}
+            to={{ pathname: '/sales-ad' }}
+            onClick={() => this.selectLink('sales-ad')}
+          >
+            AD'S
           </Link>
+          {/* <Link
+            className={`headline-6 color-white p-5px ${selectedLink ===
+              'orders' && 'selected'}`}
+            to={{ pathname: '/orders' }}
+            onClick={() => this.selectLink('orders')}
+          >
+            ORDERS
+          </Link> */}
+          <Link to={{pathname: '/sales-ad'}}>
+          <img className="nav__logo" src="https://firebasestorage.googleapis.com/v0/b/westchestermarketplace-ac3d2.appspot.com/o/logo.png?alt=media&token=88c27cdb-366f-4fb2-842b-6d8965c21bde" />
+          </Link>
+          {/* <Link
+            className={`headline-6 color-white p-5px ${selectedLink ===
+              'about' && 'selected'}`}
+            to={{ pathname: '/about' }}
+            onClick={() => this.selectLink('about')}
+          >
+            ABOUT
+          </Link> */}
+          <h1
+            className="headline-6 color-white"
+            onClick={this.openContact}
+          >
+            CONTACT
+          </h1>
         </div>
 
-        <div className={` ${!open && 'open'} nav-h__lower flex row wrap align-center justify-center nav-h__links `}>
+        {/* <div className={` ${!open && 'open'} nav-h__lower flex row wrap align-center justify-center nav-h__links `}>
           <Link
             className={`headline-6 color-white p-5px ${selectedLink ===
               'about' && 'selected'}`}
@@ -98,7 +128,7 @@ class Navbar extends Component {
           >
             CONTACT
           </h1>
-        </div>
+        </div> */}
       </nav>
     );
   }

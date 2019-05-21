@@ -1,0 +1,66 @@
+.h-5 {
+    height: 5%;
+  }
+
+  .h-15 {
+    height: 15%;
+  }
+
+
+  .sale-sign-margin {
+    margin-top: 101vh;
+  }
+
+  .sale-sign {
+    border: 3px solid;
+    width: 45%;
+    height: 45%;
+  }
+
+  .sale-sign__divider {
+    width: 100vw;
+    height: 212mm;
+  }
+
+  .sale-single-sign__header {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lobster';
+    border-bottom: 5px solid;
+    border-radius: 15px 15px 0 0;
+    background: white;
+  }
+
+  .sale-single-sign__product-name {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    text-transform: capitalize;
+    font-weight: 800;
+  }
+
+  .sale-single-sign__product-size {
+    font-size: 29px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 800;
+    padding-bottom: 10px;
+  }
+  .sale-single-sign__product-price {
+    font-size: 65px;
+    font-family: 'Chango';
+  }
+  .sale-single-sign__valid-dates {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    border-top: 5px solid;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .single-sign {
+    border: 5px solid;
+    border-radius: 15px;
+    width: 475px;
+    height: 351.2px;
+  }

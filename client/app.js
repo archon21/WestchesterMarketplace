@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 import { Navbar, Footer } from './components';
 import Routes from './routes';
 import { willReadDB, alertInteraction } from './store';
@@ -13,7 +13,7 @@ class App extends Component {
     mounted: false
   };
   async componentDidMount() {
-    await this.props.willReadDB('all');
+    await this.props.willReadDB('ads');
     this.setState({ mounted: true });
     console.log(this.props.menu);
   }
@@ -22,31 +22,30 @@ class App extends Component {
     const { alertStatus, alertTemplate } = this.props;
     return mounted ? (
       <div>
-        <Fab
+        {/* <Fab
           options={[
             {
               name: 'meeting_room',
               label: 'Opportunities',
               action: () => this.props.history.push('/holdings/opportunities')
             },
-            // {
-            //   name: 'view_agenda',
-            //   label: 'Developments',
-            //   action: () => this.props.history.push('/holdings/development')
-            // },
-            // {
-            //   name: 'location_city',
-            //   label: 'Properties',
-            //   action: () => this.props.history.push('/holdings/all-properties')
-            // },
-            // {
-            //   name: 'arrow_upward',
-            //   label: 'Back To Top',
-            //   action: () => window.scrollTo(0, 0)
-            // }
-
+            {
+              name: 'view_agenda',
+              label: 'Developments',
+              action: () => this.props.history.push('/holdings/development')
+            },
+            {
+              name: 'location_city',
+              label: 'Properties',
+              action: () => this.props.history.push('/holdings/all-properties')
+            },
+            {
+              name: 'arrow_upward',
+              label: 'Back To Top',
+              action: () => window.scrollTo(0, 0)
+            }
           ]}
-        />
+        /> */}
         <Alert
           open={alertStatus}
           template={alertTemplate}
@@ -63,7 +62,6 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  menu: state,
   alertTemplate: state.util.alertTemplate,
   alertStatus: state.util.alertStatus
 });
@@ -73,7 +71,9 @@ const mapDispatchToProps = dispatch => ({
   alertInteraction: (status, template) =>
     dispatch(alertInteraction(status, template))
 });
-export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App))
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);

@@ -93,7 +93,7 @@ class Home extends Component {
         >
           <h1 className="headline-4">Community</h1>
         </Divider>
-        <WindoW
+        {/* <WindoW
           column
           backgroundUrl="https://firebasestorage.googleapis.com/v0/b/hayesdevelopers.appspot.com/o/storrs-rd-plaza%2FDSC_1935%20copy.JPG?alt=media&token=19cc7e5e-cc51-4cfd-8fc0-92dbbaee06ab"
         >
@@ -167,8 +167,8 @@ class Home extends Component {
               </Block>
             </Animator>
           </Flex>
-        </WindoW>
-        <Divider
+        </WindoW> */}
+        {/* <Divider
           border
           backgroundColor="background-primary"
           color="color-secondary"
@@ -263,7 +263,7 @@ class Home extends Component {
 
           </Animator>
          </Flex>
-        </WindoW>
+        </WindoW> */}
       </div>
     );
   }

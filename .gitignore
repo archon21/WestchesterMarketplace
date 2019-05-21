@@ -7,3 +7,4 @@ dist
 firebase.json
 .firebasesrc
 firestore.rules
+firestore.indexes.json
